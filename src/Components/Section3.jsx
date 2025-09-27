@@ -45,11 +45,18 @@ function ScrollingCarousel({ images, speed_px_s = 30, height_cls = "h-28" }) {
 }
 
 const Section3 = () => {
-  // Import dynamique de toutes les images du dossier
-  const all_images = useMemo(() => {
-    const modules = import.meta.glob('../assets/collectionsImage/*.{png,jpg,jpeg,webp}', { eager: true });
-    return Object.values(modules).map((m) => m.default).sort();
-  }, []);
+  // Images de collection avec imports statiques
+  const all_images = [
+    new URL('../assets/collectionsImage/collection-image1.jpg', import.meta.url).href,
+    new URL('../assets/collectionsImage/collection-image2.jpg', import.meta.url).href,
+    new URL('../assets/collectionsImage/collection-image3.jpg', import.meta.url).href,
+    new URL('../assets/collectionsImage/collection-image4.jpg', import.meta.url).href,
+    new URL('../assets/collectionsImage/collection-image5.jpg', import.meta.url).href,
+    new URL('../assets/collectionsImage/collection-image6.jpg', import.meta.url).href,
+    new URL('../assets/collectionsImage/collection-image7.jpg', import.meta.url).href,
+    new URL('../assets/collectionsImage/collection-image8.jpg', import.meta.url).href,
+    new URL('../assets/collectionsImage/collection-image9.jpg', import.meta.url).href,
+  ];
 
   // Séparation: 3 images pour le rang supérieur (à côté du texte), le reste pour le bandeau
   const top_images = all_images.slice(0, 3);

@@ -65,7 +65,7 @@ const Section4 = () => {
         <div className="relative">
           <div
             ref={list_ref}
-            className="flex gap-6 sm:gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4"
+            className="flex gap-6 sm:gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4 scrollbar-hide"
           >
             {services_items.map((item, index) => (
               <div

@@ -20,7 +20,7 @@ const Header = () => {
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-3">
           <a href="/" aria-label="Aller à l'accueil" className="inline-block">
-            <img src="/logoDepetris.png" alt="DEPETRIS DESIGN Logo" className="h-10 w-auto sm:h-12 lg:h-16 cursor-pointer" />
+            <img src={new URL('../assets/forme-geo-blanc.png', import.meta.url).href} alt="DEPETRIS DESIGN Logo" className="h-12 w-auto sm:h-16 lg:h-20 cursor-pointer" />
           </a>
         </div>
 

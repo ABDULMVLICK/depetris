@@ -2,10 +2,19 @@ import React from 'react';
 
 const Section1 = () => {
   return (
-    <section 
-      className="relative min-h-screen bg-cover bg-center bg-no-repeat" 
-      style={{ backgroundImage: 'url(/image-de-fond.jpg)' }}
-    >
+    <section className="relative min-h-screen overflow-hidden">
+      {/* Vidéo de fond */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src={new URL('../assets/video-depetris.mp4', import.meta.url).href} type="video/mp4" />
+        Votre navigateur ne supporte pas la lecture vidéo.
+      </video>
+      
       {/* Overlay sombre */}
       <div className="absolute inset-0 bg-black/50"></div>
 

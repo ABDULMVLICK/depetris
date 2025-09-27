@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+/*
+Préparation des polices Inktrap.
+Remplacez les URLs des src par vos fichiers réels (.woff2/.woff) dans /public/fonts/.
+La pile de secours garantit une bonne lisibilité si la police n'est pas chargée.
+*/
+@font-face {
+  font-family: "Inktrap";
+  src: url("/fonts/Inktrap-Regular.woff2") format("woff2"),
+       url("/fonts/Inktrap-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inktrap";
+  src: url("/fonts/Inktrap-Ultrabold.woff2") format("woff2"),
+       url("/fonts/Inktrap-Ultrabold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-family-base: "Inktrap", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+/* Application des couleurs et police par défaut */
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-beige);
+  color: var(--color-black);
+  font-family: var(--font-family-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Classes utilitaires pour poids de police */
+.font-inktrap-regular {
+  font-family: var(--font-family-base);
+  font-weight: 400;
+}
+
+.font-inktrap-ultrabold {
+  font-family: var(--font-family-base);
+  font-weight: 800;
+}
+
+/* Classes utilitaires pour couleurs */
+.text-white-site { color: var(--color-white); }
+.text-black-site { color: var(--color-black); }
+.text-beige-site { color: var(--color-beige); }
+
+.bg-white-site { background-color: var(--color-white); }
+.bg-black-site { background-color: var(--color-black); }
+.bg-beige-site { background-color: var(--color-beige); }
